@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"gulp-scss-lint",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "gulp-scss-lint",
+    "description": "api documentation for [gulp-scss-lint (v0.4.0)](http://github.com/juanfran/gulp-scss-lint) [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-scss-lint.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-scss-lint) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-scss-lint.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-scss-lint)",
     "devDependencies": {
-        "gulp-scss-lint": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "gulp-scss-lint": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-gulp-scss-lint",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-gulp-scss-lint",
+    "keywords": [
+        "documentation",
+        "gulp-scss-lint"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_gulp_scss_lint.js",
+    "name": "npmdoc-gulp-scss-lint",
+    "nameAlias": "npmdoc_gulp_scss_lint",
+    "nameOriginal": "npmdoc-gulp-scss-lint",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-gulp-scss-lint"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
