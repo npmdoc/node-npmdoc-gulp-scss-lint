@@ -59,7 +59,7 @@
 <tspan x="10" y="906">  │ ├── object-assign@3.0.0 </tspan>
 <tspan x="10" y="922">  │ ├── replace-ext@0.0.1 </tspan>
 <tspan x="10" y="938">  │ ├─┬ through2@2.0.3 </tspan>
-<tspan x="10" y="954">  │ │ ├─┬ readable-stream@2.2.8 </tspan>
+<tspan x="10" y="954">  │ │ ├─┬ readable-stream@2.2.9 </tspan>
 <tspan x="10" y="970">  │ │ │ ├── isarray@1.0.0 </tspan>
 <tspan x="10" y="986">  │ │ │ └── string_decoder@1.0.0 </tspan>
 <tspan x="10" y="1002">  │ │ └── xtend@4.0.1 </tspan>
@@ -77,7 +77,7 @@
 <tspan x="10" y="1194">  │ │ │ └─┬ once@1.3.3 </tspan>
 <tspan x="10" y="1210">  │ │ │   └── wrappy@1.0.2 </tspan>
 <tspan x="10" y="1226">  │ │ ├── inherits@2.0.3 </tspan>
-<tspan x="10" y="1242">  │ │ ├─┬ readable-stream@2.2.8 </tspan>
+<tspan x="10" y="1242">  │ │ ├─┬ readable-stream@2.2.9 </tspan>
 <tspan x="10" y="1258">  │ │ │ ├── isarray@1.0.0 </tspan>
 <tspan x="10" y="1274">  │ │ │ └── string_decoder@1.0.0 </tspan>
 <tspan x="10" y="1290">  │ │ └── stream-shift@1.0.0 </tspan>
@@ -136,7 +136,7 @@
 <tspan x="10" y="2138">  │ │ │   └── is-primitive@2.0.0 </tspan>
 <tspan x="10" y="2154">  │ │ ├─┬ ordered-read-streams@0.3.0 </tspan>
 <tspan x="10" y="2170">  │ │ │ ├── is-stream@1.1.0 </tspan>
-<tspan x="10" y="2186">  │ │ │ └─┬ readable-stream@2.2.8 </tspan>
+<tspan x="10" y="2186">  │ │ │ └─┬ readable-stream@2.2.9 </tspan>
 <tspan x="10" y="2202">  │ │ │   ├── isarray@1.0.0 </tspan>
 <tspan x="10" y="2218">  │ │ │   └── string_decoder@1.0.0 </tspan>
 <tspan x="10" y="2234">  │ │ ├─┬ through2@0.6.5 </tspan>
@@ -151,18 +151,18 @@
 <tspan x="10" y="2378">  │ │ └── convert-source-map@1.5.0 </tspan>
 <tspan x="10" y="2394">  │ ├── is-valid-glob@0.3.0 </tspan>
 <tspan x="10" y="2410">  │ ├─┬ lazystream@1.0.0 </tspan>
-<tspan x="10" y="2426">  │ │ └─┬ readable-stream@2.2.8 </tspan>
+<tspan x="10" y="2426">  │ │ └─┬ readable-stream@2.2.9 </tspan>
 <tspan x="10" y="2442">  │ │   ├── isarray@1.0.0 </tspan>
 <tspan x="10" y="2458">  │ │   └── string_decoder@1.0.0 </tspan>
 <tspan x="10" y="2474">  │ ├── lodash.isequal@4.5.0 </tspan>
 <tspan x="10" y="2490">  │ ├─┬ merge-stream@1.0.1 </tspan>
-<tspan x="10" y="2506">  │ │ └─┬ readable-stream@2.2.8 </tspan>
+<tspan x="10" y="2506">  │ │ └─┬ readable-stream@2.2.9 </tspan>
 <tspan x="10" y="2522">  │ │   ├── isarray@1.0.0 </tspan>
 <tspan x="10" y="2538">  │ │   └── string_decoder@1.0.0 </tspan>
 <tspan x="10" y="2554">  │ ├─┬ mkdirp@0.5.1 </tspan>
 <tspan x="10" y="2570">  │ │ └── minimist@0.0.8 </tspan>
 <tspan x="10" y="2586">  │ ├── object-assign@4.1.1 </tspan>
-<tspan x="10" y="2602">  │ ├─┬ readable-stream@2.2.8 </tspan>
+<tspan x="10" y="2602">  │ ├─┬ readable-stream@2.2.9 </tspan>
 <tspan x="10" y="2618">  │ │ ├── buffer-shims@1.0.0 </tspan>
 <tspan x="10" y="2634">  │ │ ├── core-util-is@1.0.2 </tspan>
 <tspan x="10" y="2650">  │ │ ├── isarray@1.0.0 </tspan>
