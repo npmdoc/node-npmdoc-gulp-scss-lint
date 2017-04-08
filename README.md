@@ -3,7 +3,7 @@
 
 [![NPM](https://nodei.co/npm/gulp-scss-lint.png?downloads=true)](https://www.npmjs.com/package/gulp-scss-lint)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-scss-lint/build/screenCapture.buildNpmdoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-gulp-scss-lint%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-scss-lint/build/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-scss-lint/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-gulp-scss-lint%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-scss-lint/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gulp-scss-lint/build/screenCapture.npmPackageListing.svg)
 
