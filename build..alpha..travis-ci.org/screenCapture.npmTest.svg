@@ -1,12 +1,12 @@
-<svg height="2094" width="720" xmlns="http://www.w3.org/2000/svg">
-<rect height="2094" fill="#555" width="720"></rect>
+<svg height="2078" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="2078" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
 <tspan x="10" y="26"></tspan>
-<tspan x="10" y="42">&gt; npmdoc-gulp-scss-lint@0.0.2 test /home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint</tspan>
+<tspan x="10" y="42">&gt; npmdoc-gulp-scss-lint@0.0.3 test /home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint</tspan>
 <tspan x="10" y="58">&gt; (set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)</tspan>
 <tspan x="10" y="74"></tspan>
 <tspan x="10" y="90"></tspan>
-<tspan x="10" y="106">[MODE_BUILD=npmTest] - 2017-04-08T10:43:28Z - npm-testing /home/travis/build/npmdoc/node-npmdoc-\</tspan>
+<tspan x="10" y="106">[MODE_BUILD=npmTest] - 2017-04-08T10:45:15Z - npm-testing /home/travis/build/npmdoc/node-npmdoc-\</tspan>
 <tspan x="10" y="122">gulp-scss-lint</tspan>
 <tspan x="10" y="138"></tspan>
 <tspan x="10" y="154"></tspan>
@@ -14,121 +14,120 @@
 <tspan x="10" y="186">c-gulp-scss-lint/test.js</tspan>
 <tspan x="10" y="202">merging file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/build/test-report.json t\</tspan>
 <tspan x="10" y="218">o test-report</tspan>
-<tspan x="10" y="234">&gt; server listening on http-port 53760</tspan>
+<tspan x="10" y="234">&gt; server listening on http-port 36863</tspan>
 <tspan x="10" y="250">created apidoc file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/build/apidoc.html</tspan>
 <tspan x="10" y="266"></tspan>
 <tspan x="10" y="282"></tspan>
 <tspan x="10" y="298">browserTest - created electron entry-page /home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/t\</tspan>
-<tspan x="10" y="314">mp/electron.15b4d29621c0.65ab4df009e77.html</tspan>
+<tspan x="10" y="314">mp/electron.15b4d2b045e0.3d5dd8026f048.html</tspan>
 <tspan x="10" y="330"></tspan>
 <tspan x="10" y="346">[node test-case 1 of 6 passed] - testCase_buildLib_default</tspan>
 <tspan x="10" y="362">[node test-case 2 of 6 passed] - testCase_buildReadme_default</tspan>
 <tspan x="10" y="378">[node test-case 3 of 6 passed] - testCase_buildTest_default</tspan>
 <tspan x="10" y="394"></tspan>
 <tspan x="10" y="410">browserTest - created electron entry-page /home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/t\</tspan>
-<tspan x="10" y="426">mp/electron.15b4d2962430.2d72eccbc5ca.html</tspan>
+<tspan x="10" y="426">mp/electron.15b4d2b048d0.1b2e07e216f.html</tspan>
 <tspan x="10" y="442"></tspan>
 <tspan x="10" y="458">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
 <tspan x="10" y="474">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
-<tspan x="10" y="490">&gt; server listening on http-port 51092</tspan>
+<tspan x="10" y="490">&gt; server listening on http-port 38238</tspan>
 <tspan x="10" y="506">merging file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/build/test-report.json t\</tspan>
 <tspan x="10" y="522">o test-report</tspan>
 <tspan x="10" y="538">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
-<tspan x="10" y="554">[4764:0408/104330:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="570">[4764:0408/104330:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="586">[4799:0408/104330:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
-<tspan x="10" y="602">in process gpu-process. </tspan>
-<tspan x="10" y="618">merging file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/build/test-report.json t\</tspan>
-<tspan x="10" y="634">o test-report</tspan>
-<tspan x="10" y="650">[4764:0408/104330:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
-<tspan x="10" y="666">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
-<tspan x="10" y="682">[4768:0408/104330:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="698">[4768:0408/104330:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
-<tspan x="10" y="714">[4829:0408/104330:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
+<tspan x="10" y="554">[5733:0408/104517:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="570">[5733:0408/104517:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="586">merging file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/build/test-report.json t\</tspan>
+<tspan x="10" y="602">o test-report</tspan>
+<tspan x="10" y="618">[5765:0408/104517:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
+<tspan x="10" y="634">in process gpu-process. </tspan>
+<tspan x="10" y="650">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
+<tspan x="10" y="666">[5733:0408/104517:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
+<tspan x="10" y="682">[5732:0408/104517:WARNING:audio_manager.cc(314)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="698">[5732:0408/104517:WARNING:audio_manager.cc(275)] Multiple instances of AudioManager detected</tspan>
+<tspan x="10" y="714">[5792:0408/104517:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple threads \</tspan>
 <tspan x="10" y="730">in process gpu-process. </tspan>
-<tspan x="10" y="746">[4768:0408/104330:ERROR:browser_gpu_channel_host_factory.cc(131)] Failed to create channel.</tspan>
-<tspan x="10" y="762"></tspan>
-<tspan x="10" y="778">browserTest - opened url /home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/build/apidoc.h\</tspan>
-<tspan x="10" y="794">tml</tspan>
-<tspan x="10" y="810"></tspan>
-<tspan x="10" y="826"></tspan>
-<tspan x="10" y="842">browserTest - opened url http://127.0.0.1:53760?modeTest=1</tspan>
-<tspan x="10" y="858"></tspan>
-<tspan x="10" y="874">[4768:0408/104332:INFO:CONSOLE(248)] "----------|-----------|-----------|-----------|-----------\</tspan>
-<tspan x="10" y="890">|</tspan>
-<tspan x="10" y="906">File      |   % Stmts |% Branches |   % Funcs |   % Lines |</tspan>
+<tspan x="10" y="746"></tspan>
+<tspan x="10" y="762">browserTest - opened url http://127.0.0.1:36863?modeTest=1</tspan>
+<tspan x="10" y="778"></tspan>
+<tspan x="10" y="794"></tspan>
+<tspan x="10" y="810">browserTest - opened url /home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/build/apidoc.h\</tspan>
+<tspan x="10" y="826">tml</tspan>
+<tspan x="10" y="842"></tspan>
+<tspan x="10" y="858">[5733:0408/104519:INFO:CONSOLE(248)] "----------|-----------|-----------|-----------|-----------\</tspan>
+<tspan x="10" y="874">|</tspan>
+<tspan x="10" y="890">File      |   % Stmts |% Branches |   % Funcs |   % Lines |</tspan>
+<tspan x="10" y="906">----------|-----------|-----------|-----------|-----------|</tspan>
 <tspan x="10" y="922">----------|-----------|-----------|-----------|-----------|</tspan>
-<tspan x="10" y="938">----------|-----------|-----------|-----------|-----------|</tspan>
-<tspan x="10" y="954">All files |       100 |       100 |       100 |       100 |</tspan>
-<tspan x="10" y="970">----------|-----------|-----------|-----------|-----------|</tspan>
-<tspan x="10" y="986">", source: file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/electron.15b4d2962430\</tspan>
-<tspan x="10" y="1002">.2d72eccbc5ca.html (248)</tspan>
-<tspan x="10" y="1018">[4768:0408/104332:INFO:CONSOLE(248)] "created coverage file:///tmp/build/coverage.html/index.htm\</tspan>
-<tspan x="10" y="1034">l", source: file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/electron.15b4d296243\</tspan>
-<tspan x="10" y="1050">0.2d72eccbc5ca.html (248)</tspan>
-<tspan x="10" y="1066">[node test-case 4 of 6 passed] - testCase_buildApp_default</tspan>
-<tspan x="10" y="1082"></tspan>
-<tspan x="10" y="1098">browserTest - created screenCapture file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/\</tspan>
-<tspan x="10" y="1114">tmp/build/screenCapture.npmTest.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-gulp-scs\</tspan>
-<tspan x="10" y="1130">s-lint%2Ftmp%2Fbuild%2Fapidoc.html.png</tspan>
-<tspan x="10" y="1146"></tspan>
-<tspan x="10" y="1162">browserTest - created screenCapture file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/\</tspan>
-<tspan x="10" y="1178">tmp/build/screenCapture.npmTest.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-gulp-scs\</tspan>
-<tspan x="10" y="1194">s-lint%2Ftmp%2Fbuild%2Fapidoc.html.html</tspan>
+<tspan x="10" y="938">All files |       100 |       100 |       100 |       100 |</tspan>
+<tspan x="10" y="954">----------|-----------|-----------|-----------|-----------|</tspan>
+<tspan x="10" y="970">", source: file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/electron.15b4d2b048d0\</tspan>
+<tspan x="10" y="986">.1b2e07e216f.html (248)</tspan>
+<tspan x="10" y="1002">[5733:0408/104519:INFO:CONSOLE(248)] "created coverage file:///tmp/build/coverage.html/index.htm\</tspan>
+<tspan x="10" y="1018">l", source: file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/electron.15b4d2b048d\</tspan>
+<tspan x="10" y="1034">0.1b2e07e216f.html (248)</tspan>
+<tspan x="10" y="1050">[node test-case 4 of 6 passed] - testCase_buildApp_default</tspan>
+<tspan x="10" y="1066"></tspan>
+<tspan x="10" y="1082">browserTest - created screenCapture file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/\</tspan>
+<tspan x="10" y="1098">tmp/build/screenCapture.npmTest.browser.%2F.png</tspan>
+<tspan x="10" y="1114"></tspan>
+<tspan x="10" y="1130">browserTest - created screenCapture file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/\</tspan>
+<tspan x="10" y="1146">tmp/build/screenCapture.npmTest.browser.%2F.html</tspan>
+<tspan x="10" y="1162"></tspan>
+<tspan x="10" y="1178">browserTest - exit-code 0 - http://127.0.0.1:36863?modeTest=1</tspan>
+<tspan x="10" y="1194"></tspan>
 <tspan x="10" y="1210"></tspan>
-<tspan x="10" y="1226">browserTest - exit-code 0 - /home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/build/apido\</tspan>
-<tspan x="10" y="1242">c.html</tspan>
+<tspan x="10" y="1226">browserTest - merged coverage from /home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/cove\</tspan>
+<tspan x="10" y="1242">rage.npmTest.browser.%2F.json</tspan>
 <tspan x="10" y="1258"></tspan>
-<tspan x="10" y="1274">[node test-case 5 of 6 passed] - testCase_buildApidoc_default</tspan>
-<tspan x="10" y="1290"></tspan>
-<tspan x="10" y="1306">browserTest - created screenCapture file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/\</tspan>
-<tspan x="10" y="1322">tmp/build/screenCapture.npmTest.browser.%2F.png</tspan>
-<tspan x="10" y="1338"></tspan>
-<tspan x="10" y="1354">browserTest - created screenCapture file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/\</tspan>
-<tspan x="10" y="1370">tmp/build/screenCapture.npmTest.browser.%2F.html</tspan>
-<tspan x="10" y="1386"></tspan>
-<tspan x="10" y="1402">browserTest - exit-code 0 - http://127.0.0.1:53760?modeTest=1</tspan>
+<tspan x="10" y="1274"></tspan>
+<tspan x="10" y="1290">browserTest - merging test-report from /home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/\</tspan>
+<tspan x="10" y="1306">test-report.npmTest.browser.%2F.json</tspan>
+<tspan x="10" y="1322"></tspan>
+<tspan x="10" y="1338">[node test-case 5 of 6 passed] - testCase_webpage_default</tspan>
+<tspan x="10" y="1354"></tspan>
+<tspan x="10" y="1370">browserTest - created screenCapture file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/\</tspan>
+<tspan x="10" y="1386">tmp/build/screenCapture.npmTest.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-gulp-scs\</tspan>
+<tspan x="10" y="1402">s-lint%2Ftmp%2Fbuild%2Fapidoc.html.png</tspan>
 <tspan x="10" y="1418"></tspan>
-<tspan x="10" y="1434"></tspan>
-<tspan x="10" y="1450">browserTest - merged coverage from /home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/cove\</tspan>
-<tspan x="10" y="1466">rage.npmTest.browser.%2F.json</tspan>
+<tspan x="10" y="1434">browserTest - created screenCapture file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/\</tspan>
+<tspan x="10" y="1450">tmp/build/screenCapture.npmTest.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-gulp-scs\</tspan>
+<tspan x="10" y="1466">s-lint%2Ftmp%2Fbuild%2Fapidoc.html.html</tspan>
 <tspan x="10" y="1482"></tspan>
-<tspan x="10" y="1498"></tspan>
-<tspan x="10" y="1514">browserTest - merging test-report from /home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/\</tspan>
-<tspan x="10" y="1530">test-report.npmTest.browser.%2F.json</tspan>
-<tspan x="10" y="1546"></tspan>
-<tspan x="10" y="1562">[node test-case 6 of 6 passed] - testCase_webpage_default</tspan>
-<tspan x="10" y="1578">-----------------------------------|-----------|-----------|-----------|-----------|</tspan>
-<tspan x="10" y="1594">File                               |   % Stmts |% Branches |   % Funcs |   % Lines |</tspan>
-<tspan x="10" y="1610">-----------------------------------|-----------|-----------|-----------|-----------|</tspan>
-<tspan x="10" y="1626">   node-npmdoc-gulp-scss-lint/     |       100 |       100 |       100 |       100 |</tspan>
-<tspan x="10" y="1642">      example.js                   |       100 |       100 |       100 |       100 |</tspan>
-<tspan x="10" y="1658">      lib.npmdoc_gulp_scss_lint.js |       100 |       100 |       100 |       100 |</tspan>
-<tspan x="10" y="1674">      test.js                      |       100 |       100 |       100 |       100 |</tspan>
-<tspan x="10" y="1690">-----------------------------------|-----------|-----------|-----------|-----------|</tspan>
-<tspan x="10" y="1706">All files                          |       100 |       100 |       100 |       100 |</tspan>
-<tspan x="10" y="1722">-----------------------------------|-----------|-----------|-----------|-----------|</tspan>
-<tspan x="10" y="1738"></tspan>
-<tspan x="10" y="1754">created coverage file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/build/coverage.\</tspan>
-<tspan x="10" y="1770">html/index.html</tspan>
-<tspan x="10" y="1786">merging file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/build/test-report.json t\</tspan>
-<tspan x="10" y="1802">o test-report</tspan>
-<tspan x="10" y="1818"></tspan>
-<tspan x="10" y="1834">-------------------------------------------------------</tspan>
-<tspan x="10" y="1850">| test-report - npmTest - node - linux v6.10.2 - 2017-04-08T10:43:28.795Z</tspan>
-<tspan x="10" y="1866">|   17405 ms            0 failed        6 passed      |</tspan>
-<tspan x="10" y="1882">-------------------------------------------------------</tspan>
-<tspan x="10" y="1898">| test-report - npmdoc - node - linux v6.10.2 - 2017-04-08T10:43:07.068Z</tspan>
-<tspan x="10" y="1914">|   16940 ms            0 failed        1 passed      |</tspan>
-<tspan x="10" y="1930">-------------------------------------------------------</tspan>
-<tspan x="10" y="1946"></tspan>
-<tspan x="10" y="1962">created test-report file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/build/test-r\</tspan>
-<tspan x="10" y="1978">eport.html</tspan>
+<tspan x="10" y="1498">browserTest - exit-code 0 - /home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/build/apido\</tspan>
+<tspan x="10" y="1514">c.html</tspan>
+<tspan x="10" y="1530"></tspan>
+<tspan x="10" y="1546">[node test-case 6 of 6 passed] - testCase_buildApidoc_default</tspan>
+<tspan x="10" y="1562">-----------------------------------|-----------|-----------|-----------|-----------|</tspan>
+<tspan x="10" y="1578">File                               |   % Stmts |% Branches |   % Funcs |   % Lines |</tspan>
+<tspan x="10" y="1594">-----------------------------------|-----------|-----------|-----------|-----------|</tspan>
+<tspan x="10" y="1610">   node-npmdoc-gulp-scss-lint/     |       100 |       100 |       100 |       100 |</tspan>
+<tspan x="10" y="1626">      example.js                   |       100 |       100 |       100 |       100 |</tspan>
+<tspan x="10" y="1642">      lib.npmdoc_gulp_scss_lint.js |       100 |       100 |       100 |       100 |</tspan>
+<tspan x="10" y="1658">      test.js                      |       100 |       100 |       100 |       100 |</tspan>
+<tspan x="10" y="1674">-----------------------------------|-----------|-----------|-----------|-----------|</tspan>
+<tspan x="10" y="1690">All files                          |       100 |       100 |       100 |       100 |</tspan>
+<tspan x="10" y="1706">-----------------------------------|-----------|-----------|-----------|-----------|</tspan>
+<tspan x="10" y="1722"></tspan>
+<tspan x="10" y="1738">created coverage file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/build/coverage.\</tspan>
+<tspan x="10" y="1754">html/index.html</tspan>
+<tspan x="10" y="1770">merging file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/build/test-report.json t\</tspan>
+<tspan x="10" y="1786">o test-report</tspan>
+<tspan x="10" y="1802"></tspan>
+<tspan x="10" y="1818">-------------------------------------------------------</tspan>
+<tspan x="10" y="1834">| test-report - npmTest - node - linux v6.10.2 - 2017-04-08T10:45:15.871Z</tspan>
+<tspan x="10" y="1850">|   16781 ms            0 failed        6 passed      |</tspan>
+<tspan x="10" y="1866">-------------------------------------------------------</tspan>
+<tspan x="10" y="1882">| test-report - npmdoc - node - linux v6.10.2 - 2017-04-08T10:44:35.200Z</tspan>
+<tspan x="10" y="1898">|   16646 ms            0 failed        1 passed      |</tspan>
+<tspan x="10" y="1914">-------------------------------------------------------</tspan>
+<tspan x="10" y="1930"></tspan>
+<tspan x="10" y="1946">created test-report file:///home/travis/build/npmdoc/node-npmdoc-gulp-scss-lint/tmp/build/test-r\</tspan>
+<tspan x="10" y="1962">eport.html</tspan>
+<tspan x="10" y="1978"></tspan>
 <tspan x="10" y="1994"></tspan>
-<tspan x="10" y="2010"></tspan>
-<tspan x="10" y="2026">npmTest - 0 failed tests</tspan>
+<tspan x="10" y="2010">npmTest - 0 failed tests</tspan>
+<tspan x="10" y="2026"></tspan>
 <tspan x="10" y="2042"></tspan>
-<tspan x="10" y="2058"></tspan>
-<tspan x="10" y="2074">[MODE_BUILD=npmTest] - 2017-04-08T10:43:48Z - EXIT_CODE - 0</tspan>
+<tspan x="10" y="2058">[MODE_BUILD=npmTest] - 2017-04-08T10:45:34Z - EXIT_CODE - 0</tspan>
 </text>
 </svg>
