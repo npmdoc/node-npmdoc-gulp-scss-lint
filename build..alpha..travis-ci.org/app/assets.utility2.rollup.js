@@ -12104,7 +12104,7 @@ return Utf8ArrayToStr(bff);
                 // try to recover from error
                 setTimeout(onError, error && local.timeoutDefault);
             };
-            // try to salvage uncaughtException
+            // try to recover from uncaughtException
             process.on('uncaughtException', onError2);
             onParallel = local.utility2.onParallel(onError2);
             onParallel.counter += 1;
@@ -12432,31 +12432,42 @@ return Utf8ArrayToStr(bff);
                     local.onParallelList({
                         list: [{
                             offset: 0,
-                            limit: 100,
                             sort_by: 'asc'
                         }, {
                             offset: 100,
-                            limit: 100,
+                            sort_by: 'asc'
+                        }, {
+                            offset: 200,
+                            sort_by: 'asc'
+                        }, {
+                            offset: 300,
+                            sort_by: 'asc'
+                        }, {
+                            offset: 400,
                             sort_by: 'asc'
                         }, {
                             offset: Math.floor(Math.random() * count) - 100,
-                            limit: 100,
                             sort_by: 'asc'
                         }, {
                             offset: Math.floor(Math.random() * count) - 100,
-                            limit: 100,
                             sort_by: 'asc'
                         }, {
                             offset: 0,
-                            limit: 50,
+                            sort_by: 'desc'
+                        }, {
+                            offset: count - 500,
+                            sort_by: 'desc'
+                        }, {
+                            offset: count - 400,
+                            sort_by: 'desc'
+                        }, {
+                            offset: count - 300,
                             sort_by: 'desc'
                         }, {
                             offset: count - 200,
-                            limit: 100,
                             sort_by: 'desc'
                         }, {
                             offset: count - 100,
-                            limit: 100,
                             sort_by: 'desc'
                         }]
                     }, function (options2, onParallel) {
@@ -12468,7 +12479,7 @@ return Utf8ArrayToStr(bff);
                             },
                             url: 'https://api.travis-ci.org/repos?' +
                                 'include=repository.current_build&' +
-                                'limit=' + options2.element.limit + '&' +
+                                'limit=100&' +
                                 'offset=' + options2.element.offset + '&' +
                                 'sort_by=current_build%3A' + options2.element.sort_by
                         };
