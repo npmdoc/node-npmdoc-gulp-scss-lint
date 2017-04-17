@@ -1,9 +1,11 @@
 # api documentation for  [gulp-scss-lint (v0.4.0)](http://github.com/juanfran/gulp-scss-lint)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-scss-lint.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-scss-lint) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-scss-lint.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-scss-lint)
 #### Validate `.scss` files with `scss-lint`
 
-[![NPM](https://nodei.co/npm/gulp-scss-lint.png?downloads=true)](https://www.npmjs.com/package/gulp-scss-lint)
+[![NPM](https://nodei.co/npm/gulp-scss-lint.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-scss-lint)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-scss-lint/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-gulp-scss-lint%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-scss-lint/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-gulp-scss-lint/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-gulp-scss-lint/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-scss-lint/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-scss-lint/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gulp-scss-lint/build/screenCapture.npmPackageListing.svg)
 
@@ -66,13 +68,11 @@
     "main": "./src/index.js",
     "maintainers": [
         {
-            "name": "juanfran",
-            "email": "juanfran.ag@gmail.com"
+            "name": "juanfran"
         }
     ],
     "name": "gulp-scss-lint",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/juanfran/gulp-scss-lint.git"
@@ -82,242 +82,6 @@
     },
     "version": "0.4.0"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module gulp-scss-lint](#apidoc.module.gulp-scss-lint)
-1.  [function <span class="apidocSignatureSpan">gulp-scss-lint.</span>defaultReporter (file)](#apidoc.element.gulp-scss-lint.defaultReporter)
-1.  [function <span class="apidocSignatureSpan">gulp-scss-lint.</span>failReporter (severity)](#apidoc.element.gulp-scss-lint.failReporter)
-1.  object <span class="apidocSignatureSpan">gulp-scss-lint.</span>checkstyle
-1.  object <span class="apidocSignatureSpan">gulp-scss-lint.</span>reporters
-
-#### [module gulp-scss-lint.checkstyle](#apidoc.module.gulp-scss-lint.checkstyle)
-1.  [function <span class="apidocSignatureSpan">gulp-scss-lint.checkstyle.</span>toJSON (report, cb)](#apidoc.element.gulp-scss-lint.checkstyle.toJSON)
-
-#### [module gulp-scss-lint.reporters](#apidoc.module.gulp-scss-lint.reporters)
-1.  [function <span class="apidocSignatureSpan">gulp-scss-lint.reporters.</span>defaultReporter (file)](#apidoc.element.gulp-scss-lint.reporters.defaultReporter)
-1.  [function <span class="apidocSignatureSpan">gulp-scss-lint.reporters.</span>failReporter (severity)](#apidoc.element.gulp-scss-lint.reporters.failReporter)
-
-
-
-# <a name="apidoc.module.gulp-scss-lint"></a>[module gulp-scss-lint](#apidoc.module.gulp-scss-lint)
-
-#### <a name="apidoc.element.gulp-scss-lint.defaultReporter"></a>[function <span class="apidocSignatureSpan">gulp-scss-lint.</span>defaultReporter (file)](#apidoc.element.gulp-scss-lint.defaultReporter)
-- description and source-code
-```javascript
-defaultReporter = function (file) {
-  if (!file.scsslint.success) {
-    gutil.log(colors.cyan(file.scsslint.issues.length) + ' issues found in ' + colors.magenta(file.path));
-
-    file.scsslint.issues.forEach(function (issue) {
-      var severity = issue.severity === 'warning' ? colors.yellow(' [W] ') : colors.red(' [E] ');
-      var linter = issue.linter ? (issue.linter + ': ') : '';
-      var logMsg =
-        colors.cyan(file.relative) + ':' + colors.magenta(issue.line) + severity + colors.green(linter) + issue.reason;
-
-      gutil.log(logMsg);
-    });
-  }
-}
-```
-- example usage
-```shell
-...
-}
-
-files[i].scsslint = lintResult;
-
-if (options.customReport) {
-  options.customReport(files[i], stream);
-} else {
-  reporters.defaultReporter(files[i]);
-}
-
-if (!options.filePipeOutput) {
-  if (options.src) {
-    stream.push(files[i]);
-  } else {
-    stream.emit('data', files[i]);
-...
-```
-
-#### <a name="apidoc.element.gulp-scss-lint.failReporter"></a>[function <span class="apidocSignatureSpan">gulp-scss-lint.</span>failReporter (severity)](#apidoc.element.gulp-scss-lint.failReporter)
-- description and source-code
-```javascript
-failReporter = function (severity) {
-  return es.map(function(file, cb) {
-    var error;
-
-    if (!file.scsslint.success) {
-      if (!severity || severity === 'E' && file.scsslint.errors > 0) {
-        error = new gutil.PluginError('gulp-scss-lint', {
-          message: 'ScssLint failed for: ' + file.relative,
-          showStack: false
-        });
-      }
-    }
-
-    cb(error, file);
-  });
-}
-```
-- example usage
-```shell
-...
-
-'''js
-var scsslint = require('gulp-scss-lint');
-
-gulp.task('scss-lint', function() {
-  return gulp.src('/scss/*.scss')
-    .pipe(scsslint())
-    .pipe(scsslint.failReporter())
-});
-'''
-
-if you just want 'failReporter' to fail just with errors pass the 'E' string
-
-'''js
-var scsslint = require('gulp-scss-lint');
-...
-```
-
-
-
-# <a name="apidoc.module.gulp-scss-lint.checkstyle"></a>[module gulp-scss-lint.checkstyle](#apidoc.module.gulp-scss-lint.checkstyle)
-
-#### <a name="apidoc.element.gulp-scss-lint.checkstyle.toJSON"></a>[function <span class="apidocSignatureSpan">gulp-scss-lint.checkstyle.</span>toJSON (report, cb)](#apidoc.element.gulp-scss-lint.checkstyle.toJSON)
-- description and source-code
-```javascript
-toJSON = function (report, cb) {
-  var obj = {};
-  var xmlReport = pd.xml(report);
-  var error = [];
-
-  xml2js(xmlReport, function(err, report) {
-    report.checkstyle.file = report.checkstyle.file || [];
-
-    report.checkstyle.file.forEach(function(file) {
-        obj[file.$.name] = [];
-
-        file.error.forEach(function(error) {
-          error.$.linter = error.$.source;
-          error.$.reason = error.$.message;
-
-          obj[file.$.name].push(error.$);
-        });
-    });
-
-    cb([obj, xmlReport]);
-  });
-}
-```
-- example usage
-```shell
-...
-        }
-      } else if (error && error.code === 1 && report.length === 0) {
-        reject('Error code ' + error.code + '\n' + error);
-      } else  {
-        if (options.format === 'JSON'){
-          resolve([JSON.parse(report)]);
-        } else {
-          checkstyle.toJSON(report, resolve);
-        }
-      }
-    });
-  });
-}
-
-module.exports = function(filePaths, options) {
-...
-```
-
-
-
-# <a name="apidoc.module.gulp-scss-lint.reporters"></a>[module gulp-scss-lint.reporters](#apidoc.module.gulp-scss-lint.reporters)
-
-#### <a name="apidoc.element.gulp-scss-lint.reporters.defaultReporter"></a>[function <span class="apidocSignatureSpan">gulp-scss-lint.reporters.</span>defaultReporter (file)](#apidoc.element.gulp-scss-lint.reporters.defaultReporter)
-- description and source-code
-```javascript
-defaultReporter = function (file) {
-  if (!file.scsslint.success) {
-    gutil.log(colors.cyan(file.scsslint.issues.length) + ' issues found in ' + colors.magenta(file.path));
-
-    file.scsslint.issues.forEach(function (issue) {
-      var severity = issue.severity === 'warning' ? colors.yellow(' [W] ') : colors.red(' [E] ');
-      var linter = issue.linter ? (issue.linter + ': ') : '';
-      var logMsg =
-        colors.cyan(file.relative) + ':' + colors.magenta(issue.line) + severity + colors.green(linter) + issue.reason;
-
-      gutil.log(logMsg);
-    });
-  }
-}
-```
-- example usage
-```shell
-...
-}
-
-files[i].scsslint = lintResult;
-
-if (options.customReport) {
-  options.customReport(files[i], stream);
-} else {
-  reporters.defaultReporter(files[i]);
-}
-
-if (!options.filePipeOutput) {
-  if (options.src) {
-    stream.push(files[i]);
-  } else {
-    stream.emit('data', files[i]);
-...
-```
-
-#### <a name="apidoc.element.gulp-scss-lint.reporters.failReporter"></a>[function <span class="apidocSignatureSpan">gulp-scss-lint.reporters.</span>failReporter (severity)](#apidoc.element.gulp-scss-lint.reporters.failReporter)
-- description and source-code
-```javascript
-failReporter = function (severity) {
-  return es.map(function(file, cb) {
-    var error;
-
-    if (!file.scsslint.success) {
-      if (!severity || severity === 'E' && file.scsslint.errors > 0) {
-        error = new gutil.PluginError('gulp-scss-lint', {
-          message: 'ScssLint failed for: ' + file.relative,
-          showStack: false
-        });
-      }
-    }
-
-    cb(error, file);
-  });
-}
-```
-- example usage
-```shell
-...
-
-'''js
-var scsslint = require('gulp-scss-lint');
-
-gulp.task('scss-lint', function() {
-  return gulp.src('/scss/*.scss')
-    .pipe(scsslint())
-    .pipe(scsslint.failReporter())
-});
-'''
-
-if you just want 'failReporter' to fail just with errors pass the 'E' string
-
-'''js
-var scsslint = require('gulp-scss-lint');
-...
 ```
 
 
