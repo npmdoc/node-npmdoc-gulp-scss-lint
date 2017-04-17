@@ -63,6 +63,24 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-scss-lint.gulp-scss-lint">
+            function <span class="apidocSignatureSpan"></span>gulp-scss-lint
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-scss-lint.command">
+            function <span class="apidocSignatureSpan">gulp-scss-lint.</span>command
+            <span class="apidocSignatureSpan">(filePaths, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.gulp-scss-lint.defaultReporter">
             function <span class="apidocSignatureSpan">gulp-scss-lint.</span>defaultReporter
             <span class="apidocSignatureSpan">(file)</span>
@@ -75,6 +93,24 @@
             <a class="apidocElementLiA" href="#apidoc.element.gulp-scss-lint.failReporter">
             function <span class="apidocSignatureSpan">gulp-scss-lint.</span>failReporter
             <span class="apidocSignatureSpan">(severity)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-scss-lint.scss_lint">
+            function <span class="apidocSignatureSpan">gulp-scss-lint.</span>scss_lint
+            <span class="apidocSignatureSpan">(stream, files, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-scss-lint.toString">
+            function <span class="apidocSignatureSpan">gulp-scss-lint.</span>toString
+            <span class="apidocSignatureSpan">()</span>
             </a>
 
         </li>
@@ -106,6 +142,45 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-scss-lint.command">module gulp-scss-lint.command</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-scss-lint.command.command">
+            function <span class="apidocSignatureSpan">gulp-scss-lint.</span>command
+            <span class="apidocSignatureSpan">(filePaths, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-scss-lint.defaultReporter">module gulp-scss-lint.defaultReporter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-scss-lint.defaultReporter.defaultReporter">
+            function <span class="apidocSignatureSpan">gulp-scss-lint.</span>defaultReporter
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-scss-lint.failReporter">module gulp-scss-lint.failReporter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-scss-lint.failReporter.failReporter">
+            function <span class="apidocSignatureSpan">gulp-scss-lint.</span>failReporter
+            <span class="apidocSignatureSpan">(severity)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-scss-lint.reporters">module gulp-scss-lint.reporters</a><ol>
 
         <li>
@@ -128,10 +203,142 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-scss-lint.scss_lint">module gulp-scss-lint.scss_lint</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-scss-lint.scss_lint.scss_lint">
+            function <span class="apidocSignatureSpan">gulp-scss-lint.</span>scss_lint
+            <span class="apidocSignatureSpan">(stream, files, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-scss-lint.toString">module gulp-scss-lint.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-scss-lint.toString.toString">
+            function <span class="apidocSignatureSpan">gulp-scss-lint.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.gulp-scss-lint" id="apidoc.module.gulp-scss-lint">module gulp-scss-lint</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-scss-lint.gulp-scss-lint" id="apidoc.element.gulp-scss-lint.gulp-scss-lint">
+        function <span class="apidocSignatureSpan"></span>gulp-scss-lint
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gulp-scss-lint = function (options) {
+  options = options || {};
+
+  options.format = &#x27;JSON&#x27;;
+
+  if (options.reporterOutputFormat === &#x27;Checkstyle&#x27;) {
+    options.format = &#x27;Checkstyle&#x27;;
+    options.require = &#x27;scss_lint_reporter_checkstyle&#x27;;
+  }
+
+  if (options.exclude) {
+    throw new gutil.PluginError(PLUGIN_NAME, &#x22;You must use gulp src to exclude&#x22;);
+  }
+
+  var lint = function(stream, files) {
+    scssLint(stream, files, options)
+      .then(function() {
+        if (!options.endless) {
+          stream.emit(&#x27;end&#x27;);
+        }
+      }, function(e) {
+        var err = new gutil.PluginError(PLUGIN_NAME, e);
+
+        stream.emit(&#x27;error&#x27;, err);
+        stream.emit(&#x27;end&#x27;);
+      })
+      .done(function(e) {});
+  };
+
+  var getStream = function() {
+    var files = [];
+
+    var writeStream = function(currentFile){
+      if (options.endless) {
+        lint(stream, [currentFile]);
+      } else {
+        files.push(currentFile);
+      }
+    };
+
+    var endStream = function() {
+      if (options.endless) {
+        return;
+      }
+
+      if (!files.length) {
+        stream.emit(&#x27;end&#x27;);
+        return;
+      }
+
+      lint(stream, files);
+    };
+
+    var stream = es.through(writeStream, endStream);
+
+    return stream;
+  };
+
+  var getNewStream = function() {
+    var stream = new Readable({objectMode: true});
+    stream._read = function () {};
+
+    lint(stream, [options.src]);
+
+    return stream;
+  };
+
+  if (options.src) {
+    return getNewStream();
+  }
+
+  return getStream();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-scss-lint.command" id="apidoc.element.gulp-scss-lint.command">
+        function <span class="apidocSignatureSpan">gulp-scss-lint.</span>command
+        <span class="apidocSignatureSpan">(filePaths, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">command = function (filePaths, options) {
+  var command = generateCommand(filePaths, options);
+
+  if (options.verbose) {
+    console.log(command);
+  }
+
+  return execLintCommand(command, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
@@ -220,6 +427,69 @@ var scsslint = require(&#x27;gulp-scss-lint&#x27;);
 
 
 
+    <h2>
+        <a href="#apidoc.element.gulp-scss-lint.scss_lint" id="apidoc.element.gulp-scss-lint.scss_lint">
+        function <span class="apidocSignatureSpan">gulp-scss-lint.</span>scss_lint
+        <span class="apidocSignatureSpan">(stream, files, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">scss_lint = function (stream, files, options) {
+  return new Promise(function(resolve, reject){
+    var filesPaths = [];
+
+    if (options.src) {
+      filesPaths = options.src;
+    } else {
+      filesPaths = getFilePaths(files);
+    }
+
+    lintCommand(filesPaths, options)
+      .spread(function(report, xmlReport) {
+        if (options.src) {
+          var paths = Object.keys(report);
+
+          getVinylFiles(paths).then(function(vinylFiles) {
+            reportLint(stream, vinylFiles, options, report, xmlReport);
+            resolve();
+          });
+        } else {
+          try {
+            reportLint(stream, files, options, report, xmlReport);
+          } catch(err) {
+            // if the user run scss-lint from node instead of gulp, stream.emit(&#x27;data&#x27;, null); becomes syncronous and this will
+handle the failReporter #58
+            reject(err);
+          }
+
+          resolve();
+        }
+      })
+      .catch(function (e) {
+        reject(e);
+      });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-scss-lint.toString" id="apidoc.element.gulp-scss-lint.toString">
+        function <span class="apidocSignatureSpan">gulp-scss-lint.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
 
 
 
@@ -274,6 +544,128 @@ var scsslint = require(&#x27;gulp-scss-lint&#x27;);
 }
 
 module.exports = function(filePaths, options) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-scss-lint.command" id="apidoc.module.gulp-scss-lint.command">module gulp-scss-lint.command</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-scss-lint.command.command" id="apidoc.element.gulp-scss-lint.command.command">
+        function <span class="apidocSignatureSpan">gulp-scss-lint.</span>command
+        <span class="apidocSignatureSpan">(filePaths, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">command = function (filePaths, options) {
+  var command = generateCommand(filePaths, options);
+
+  if (options.verbose) {
+    console.log(command);
+  }
+
+  return execLintCommand(command, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-scss-lint.defaultReporter" id="apidoc.module.gulp-scss-lint.defaultReporter">module gulp-scss-lint.defaultReporter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-scss-lint.defaultReporter.defaultReporter" id="apidoc.element.gulp-scss-lint.defaultReporter.defaultReporter">
+        function <span class="apidocSignatureSpan">gulp-scss-lint.</span>defaultReporter
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defaultReporter = function (file) {
+  if (!file.scsslint.success) {
+    gutil.log(colors.cyan(file.scsslint.issues.length) + &#x27; issues found in &#x27; + colors.magenta(file.path));
+
+    file.scsslint.issues.forEach(function (issue) {
+      var severity = issue.severity === &#x27;warning&#x27; ? colors.yellow(&#x27; [W] &#x27;) : colors.red(&#x27; [E] &#x27;);
+      var linter = issue.linter ? (issue.linter + &#x27;: &#x27;) : &#x27;&#x27;;
+      var logMsg =
+        colors.cyan(file.relative) + &#x27;:&#x27; + colors.magenta(issue.line) + severity + colors.green(linter) + issue.reason;
+
+      gutil.log(logMsg);
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+files[i].scsslint = lintResult;
+
+if (options.customReport) {
+  options.customReport(files[i], stream);
+} else {
+  reporters.<span class="apidocCodeKeywordSpan">defaultReporter</span>(files[i]);
+}
+
+if (!options.filePipeOutput) {
+  if (options.src) {
+    stream.push(files[i]);
+  } else {
+    stream.emit(&#x27;data&#x27;, files[i]);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-scss-lint.failReporter" id="apidoc.module.gulp-scss-lint.failReporter">module gulp-scss-lint.failReporter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-scss-lint.failReporter.failReporter" id="apidoc.element.gulp-scss-lint.failReporter.failReporter">
+        function <span class="apidocSignatureSpan">gulp-scss-lint.</span>failReporter
+        <span class="apidocSignatureSpan">(severity)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">failReporter = function (severity) {
+  return es.map(function(file, cb) {
+    var error;
+
+    if (!file.scsslint.success) {
+      if (!severity || severity === &#x27;E&#x27; &#x26;&#x26; file.scsslint.errors &#x3e; 0) {
+        error = new gutil.PluginError(&#x27;gulp-scss-lint&#x27;, {
+          message: &#x27;ScssLint failed for: &#x27; + file.relative,
+          showStack: false
+        });
+      }
+    }
+
+    cb(error, file);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var scsslint = require(&#x27;gulp-scss-lint&#x27;);
+
+gulp.task(&#x27;scss-lint&#x27;, function() {
+  return gulp.src(&#x27;/scss/*.scss&#x27;)
+    .pipe(scsslint())
+    .pipe(scsslint.<span class="apidocCodeKeywordSpan">failReporter</span>())
+});
+```
+
+if you just want `failReporter` to fail just with errors pass the &#x27;E&#x27; string
+
+```js
+var scsslint = require(&#x27;gulp-scss-lint&#x27;);
 ...</pre></li>
     </ul>
 
@@ -366,6 +758,77 @@ if you just want `failReporter` to fail just with errors pass the &#x27;E&#x27; 
 ```js
 var scsslint = require(&#x27;gulp-scss-lint&#x27;);
 ...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-scss-lint.scss_lint" id="apidoc.module.gulp-scss-lint.scss_lint">module gulp-scss-lint.scss_lint</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-scss-lint.scss_lint.scss_lint" id="apidoc.element.gulp-scss-lint.scss_lint.scss_lint">
+        function <span class="apidocSignatureSpan">gulp-scss-lint.</span>scss_lint
+        <span class="apidocSignatureSpan">(stream, files, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">scss_lint = function (stream, files, options) {
+  return new Promise(function(resolve, reject){
+    var filesPaths = [];
+
+    if (options.src) {
+      filesPaths = options.src;
+    } else {
+      filesPaths = getFilePaths(files);
+    }
+
+    lintCommand(filesPaths, options)
+      .spread(function(report, xmlReport) {
+        if (options.src) {
+          var paths = Object.keys(report);
+
+          getVinylFiles(paths).then(function(vinylFiles) {
+            reportLint(stream, vinylFiles, options, report, xmlReport);
+            resolve();
+          });
+        } else {
+          try {
+            reportLint(stream, files, options, report, xmlReport);
+          } catch(err) {
+            // if the user run scss-lint from node instead of gulp, stream.emit(&#x27;data&#x27;, null); becomes syncronous and this will
+handle the failReporter #58
+            reject(err);
+          }
+
+          resolve();
+        }
+      })
+      .catch(function (e) {
+        reject(e);
+      });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-scss-lint.toString" id="apidoc.module.gulp-scss-lint.toString">module gulp-scss-lint.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-scss-lint.toString.toString" id="apidoc.element.gulp-scss-lint.toString.toString">
+        function <span class="apidocSignatureSpan">gulp-scss-lint.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 

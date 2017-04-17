@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="http://github.com/juanfran/gulp-scss-lint"
-
-    >gulp-scss-lint (v0.4.0)</a>
+    <a href="http://github.com/juanfran/gulp-scss-lint">gulp-scss-lint (v0.4.0)</a>
 </h1>
 <h4>Validate `.scss` files with `scss-lint`</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-scss-lint">module gulp-scss-lint</a><ol>
 
@@ -245,28 +238,28 @@
     <li>description and source-code<pre class="apidocCodePre">gulp-scss-lint = function (options) {
   options = options || {};
 
-  options.format = &#x27;JSON&#x27;;
+  options.format = 'JSON';
 
-  if (options.reporterOutputFormat === &#x27;Checkstyle&#x27;) {
-    options.format = &#x27;Checkstyle&#x27;;
-    options.require = &#x27;scss_lint_reporter_checkstyle&#x27;;
+  if (options.reporterOutputFormat === 'Checkstyle') {
+    options.format = 'Checkstyle';
+    options.require = 'scss_lint_reporter_checkstyle';
   }
 
   if (options.exclude) {
-    throw new gutil.PluginError(PLUGIN_NAME, &#x22;You must use gulp src to exclude&#x22;);
+    throw new gutil.PluginError(PLUGIN_NAME, "You must use gulp src to exclude");
   }
 
   var lint = function(stream, files) {
     scssLint(stream, files, options)
       .then(function() {
         if (!options.endless) {
-          stream.emit(&#x27;end&#x27;);
+          stream.emit('end');
         }
       }, function(e) {
         var err = new gutil.PluginError(PLUGIN_NAME, e);
 
-        stream.emit(&#x27;error&#x27;, err);
-        stream.emit(&#x27;end&#x27;);
+        stream.emit('error', err);
+        stream.emit('end');
       })
       .done(function(e) {});
   };
@@ -288,7 +281,7 @@
       }
 
       if (!files.length) {
-        stream.emit(&#x27;end&#x27;);
+        stream.emit('end');
         return;
       }
 
@@ -350,13 +343,13 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">defaultReporter = function (file) {
   if (!file.scsslint.success) {
-    gutil.log(colors.cyan(file.scsslint.issues.length) + &#x27; issues found in &#x27; + colors.magenta(file.path));
+    gutil.log(colors.cyan(file.scsslint.issues.length) + ' issues found in ' + colors.magenta(file.path));
 
     file.scsslint.issues.forEach(function (issue) {
-      var severity = issue.severity === &#x27;warning&#x27; ? colors.yellow(&#x27; [W] &#x27;) : colors.red(&#x27; [E] &#x27;);
-      var linter = issue.linter ? (issue.linter + &#x27;: &#x27;) : &#x27;&#x27;;
+      var severity = issue.severity === 'warning' ? colors.yellow(' [W] ') : colors.red(' [E] ');
+      var linter = issue.linter ? (issue.linter + ': ') : '';
       var logMsg =
-        colors.cyan(file.relative) + &#x27;:&#x27; + colors.magenta(issue.line) + severity + colors.green(linter) + issue.reason;
+        colors.cyan(file.relative) + ':' + colors.magenta(issue.line) + severity + colors.green(linter) + issue.reason;
 
       gutil.log(logMsg);
     });
@@ -377,7 +370,7 @@ if (!options.filePipeOutput) {
   if (options.src) {
     stream.push(files[i]);
   } else {
-    stream.emit(&#x27;data&#x27;, files[i]);
+    stream.emit('data', files[i]);
 ...</pre></li>
     </ul>
 
@@ -395,9 +388,9 @@ if (!options.filePipeOutput) {
     var error;
 
     if (!file.scsslint.success) {
-      if (!severity || severity === &#x27;E&#x27; &#x26;&#x26; file.scsslint.errors &#x3e; 0) {
-        error = new gutil.PluginError(&#x27;gulp-scss-lint&#x27;, {
-          message: &#x27;ScssLint failed for: &#x27; + file.relative,
+      if (!severity || severity === 'E' &amp;&amp; file.scsslint.errors &gt; 0) {
+        error = new gutil.PluginError('gulp-scss-lint', {
+          message: 'ScssLint failed for: ' + file.relative,
           showStack: false
         });
       }
@@ -409,19 +402,19 @@ if (!options.filePipeOutput) {
     <li>example usage<pre class="apidocCodePre">...
 
 ```js
-var scsslint = require(&#x27;gulp-scss-lint&#x27;);
+var scsslint = require('gulp-scss-lint');
 
-gulp.task(&#x27;scss-lint&#x27;, function() {
-  return gulp.src(&#x27;/scss/*.scss&#x27;)
+gulp.task('scss-lint', function() {
+  return gulp.src('/scss/*.scss')
     .pipe(scsslint())
     .pipe(scsslint.<span class="apidocCodeKeywordSpan">failReporter</span>())
 });
 ```
 
-if you just want `failReporter` to fail just with errors pass the &#x27;E&#x27; string
+if you just want `failReporter` to fail just with errors pass the 'E' string
 
 ```js
-var scsslint = require(&#x27;gulp-scss-lint&#x27;);
+var scsslint = require('gulp-scss-lint');
 ...</pre></li>
     </ul>
 
@@ -457,7 +450,7 @@ var scsslint = require(&#x27;gulp-scss-lint&#x27;);
           try {
             reportLint(stream, files, options, report, xmlReport);
           } catch(err) {
-            // if the user run scss-lint from node instead of gulp, stream.emit(&#x27;data&#x27;, null); becomes syncronous and this will
+            // if the user run scss-lint from node instead of gulp, stream.emit('data', null); becomes syncronous and this will
 handle the failReporter #58
             reject(err);
           }
@@ -530,10 +523,10 @@ handle the failReporter #58
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
         }
-      } else if (error &#x26;&#x26; error.code === 1 &#x26;&#x26; report.length === 0) {
-        reject(&#x27;Error code &#x27; + error.code + &#x27;\n&#x27; + error);
+      } else if (error &amp;&amp; error.code === 1 &amp;&amp; report.length === 0) {
+        reject('Error code ' + error.code + '\n' + error);
       } else  {
-        if (options.format === &#x27;JSON&#x27;){
+        if (options.format === 'JSON'){
           resolve([JSON.parse(report)]);
         } else {
           checkstyle.<span class="apidocCodeKeywordSpan">toJSON</span>(report, resolve);
@@ -589,13 +582,13 @@ module.exports = function(filePaths, options) {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">defaultReporter = function (file) {
   if (!file.scsslint.success) {
-    gutil.log(colors.cyan(file.scsslint.issues.length) + &#x27; issues found in &#x27; + colors.magenta(file.path));
+    gutil.log(colors.cyan(file.scsslint.issues.length) + ' issues found in ' + colors.magenta(file.path));
 
     file.scsslint.issues.forEach(function (issue) {
-      var severity = issue.severity === &#x27;warning&#x27; ? colors.yellow(&#x27; [W] &#x27;) : colors.red(&#x27; [E] &#x27;);
-      var linter = issue.linter ? (issue.linter + &#x27;: &#x27;) : &#x27;&#x27;;
+      var severity = issue.severity === 'warning' ? colors.yellow(' [W] ') : colors.red(' [E] ');
+      var linter = issue.linter ? (issue.linter + ': ') : '';
       var logMsg =
-        colors.cyan(file.relative) + &#x27;:&#x27; + colors.magenta(issue.line) + severity + colors.green(linter) + issue.reason;
+        colors.cyan(file.relative) + ':' + colors.magenta(issue.line) + severity + colors.green(linter) + issue.reason;
 
       gutil.log(logMsg);
     });
@@ -616,7 +609,7 @@ if (!options.filePipeOutput) {
   if (options.src) {
     stream.push(files[i]);
   } else {
-    stream.emit(&#x27;data&#x27;, files[i]);
+    stream.emit('data', files[i]);
 ...</pre></li>
     </ul>
 
@@ -639,9 +632,9 @@ if (!options.filePipeOutput) {
     var error;
 
     if (!file.scsslint.success) {
-      if (!severity || severity === &#x27;E&#x27; &#x26;&#x26; file.scsslint.errors &#x3e; 0) {
-        error = new gutil.PluginError(&#x27;gulp-scss-lint&#x27;, {
-          message: &#x27;ScssLint failed for: &#x27; + file.relative,
+      if (!severity || severity === 'E' &amp;&amp; file.scsslint.errors &gt; 0) {
+        error = new gutil.PluginError('gulp-scss-lint', {
+          message: 'ScssLint failed for: ' + file.relative,
           showStack: false
         });
       }
@@ -653,19 +646,19 @@ if (!options.filePipeOutput) {
     <li>example usage<pre class="apidocCodePre">...
 
 ```js
-var scsslint = require(&#x27;gulp-scss-lint&#x27;);
+var scsslint = require('gulp-scss-lint');
 
-gulp.task(&#x27;scss-lint&#x27;, function() {
-  return gulp.src(&#x27;/scss/*.scss&#x27;)
+gulp.task('scss-lint', function() {
+  return gulp.src('/scss/*.scss')
     .pipe(scsslint())
     .pipe(scsslint.<span class="apidocCodeKeywordSpan">failReporter</span>())
 });
 ```
 
-if you just want `failReporter` to fail just with errors pass the &#x27;E&#x27; string
+if you just want `failReporter` to fail just with errors pass the 'E' string
 
 ```js
-var scsslint = require(&#x27;gulp-scss-lint&#x27;);
+var scsslint = require('gulp-scss-lint');
 ...</pre></li>
     </ul>
 
@@ -685,13 +678,13 @@ var scsslint = require(&#x27;gulp-scss-lint&#x27;);
     <ul>
     <li>description and source-code<pre class="apidocCodePre">defaultReporter = function (file) {
   if (!file.scsslint.success) {
-    gutil.log(colors.cyan(file.scsslint.issues.length) + &#x27; issues found in &#x27; + colors.magenta(file.path));
+    gutil.log(colors.cyan(file.scsslint.issues.length) + ' issues found in ' + colors.magenta(file.path));
 
     file.scsslint.issues.forEach(function (issue) {
-      var severity = issue.severity === &#x27;warning&#x27; ? colors.yellow(&#x27; [W] &#x27;) : colors.red(&#x27; [E] &#x27;);
-      var linter = issue.linter ? (issue.linter + &#x27;: &#x27;) : &#x27;&#x27;;
+      var severity = issue.severity === 'warning' ? colors.yellow(' [W] ') : colors.red(' [E] ');
+      var linter = issue.linter ? (issue.linter + ': ') : '';
       var logMsg =
-        colors.cyan(file.relative) + &#x27;:&#x27; + colors.magenta(issue.line) + severity + colors.green(linter) + issue.reason;
+        colors.cyan(file.relative) + ':' + colors.magenta(issue.line) + severity + colors.green(linter) + issue.reason;
 
       gutil.log(logMsg);
     });
@@ -712,7 +705,7 @@ if (!options.filePipeOutput) {
   if (options.src) {
     stream.push(files[i]);
   } else {
-    stream.emit(&#x27;data&#x27;, files[i]);
+    stream.emit('data', files[i]);
 ...</pre></li>
     </ul>
 
@@ -730,9 +723,9 @@ if (!options.filePipeOutput) {
     var error;
 
     if (!file.scsslint.success) {
-      if (!severity || severity === &#x27;E&#x27; &#x26;&#x26; file.scsslint.errors &#x3e; 0) {
-        error = new gutil.PluginError(&#x27;gulp-scss-lint&#x27;, {
-          message: &#x27;ScssLint failed for: &#x27; + file.relative,
+      if (!severity || severity === 'E' &amp;&amp; file.scsslint.errors &gt; 0) {
+        error = new gutil.PluginError('gulp-scss-lint', {
+          message: 'ScssLint failed for: ' + file.relative,
           showStack: false
         });
       }
@@ -744,19 +737,19 @@ if (!options.filePipeOutput) {
     <li>example usage<pre class="apidocCodePre">...
 
 ```js
-var scsslint = require(&#x27;gulp-scss-lint&#x27;);
+var scsslint = require('gulp-scss-lint');
 
-gulp.task(&#x27;scss-lint&#x27;, function() {
-  return gulp.src(&#x27;/scss/*.scss&#x27;)
+gulp.task('scss-lint', function() {
+  return gulp.src('/scss/*.scss')
     .pipe(scsslint())
     .pipe(scsslint.<span class="apidocCodeKeywordSpan">failReporter</span>())
 });
 ```
 
-if you just want `failReporter` to fail just with errors pass the &#x27;E&#x27; string
+if you just want `failReporter` to fail just with errors pass the 'E' string
 
 ```js
-var scsslint = require(&#x27;gulp-scss-lint&#x27;);
+var scsslint = require('gulp-scss-lint');
 ...</pre></li>
     </ul>
 
@@ -797,7 +790,7 @@ var scsslint = require(&#x27;gulp-scss-lint&#x27;);
           try {
             reportLint(stream, files, options, report, xmlReport);
           } catch(err) {
-            // if the user run scss-lint from node instead of gulp, stream.emit(&#x27;data&#x27;, null); becomes syncronous and this will
+            // if the user run scss-lint from node instead of gulp, stream.emit('data', null); becomes syncronous and this will
 handle the failReporter #58
             reject(err);
           }
@@ -840,3 +833,4 @@ handle the failReporter #58
     ]
 </div>
 </div>
+</body></html>

@@ -96,7 +96,7 @@
 <tspan x="10" y="1498">  │ │ │ └── path-dirname@1.0.2 </tspan>
 <tspan x="10" y="1514">  │ │ ├─┬ micromatch@2.3.11 </tspan>
 <tspan x="10" y="1530">  │ │ │ ├─┬ arr-diff@2.0.0 </tspan>
-<tspan x="10" y="1546">  │ │ │ │ └── arr-flatten@1.0.1 </tspan>
+<tspan x="10" y="1546">  │ │ │ │ └── arr-flatten@1.0.3 </tspan>
 <tspan x="10" y="1562">  │ │ │ ├── array-unique@0.2.1 </tspan>
 <tspan x="10" y="1578">  │ │ │ ├─┬ braces@1.8.5 </tspan>
 <tspan x="10" y="1594">  │ │ │ │ ├─┬ expand-range@1.8.2 </tspan>
