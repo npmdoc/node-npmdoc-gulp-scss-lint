@@ -1,4 +1,7 @@
-# api documentation for  [gulp-scss-lint (v0.4.0)](http://github.com/juanfran/gulp-scss-lint)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-scss-lint.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-scss-lint) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-scss-lint.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-scss-lint)
+# npmdoc-gulp-scss-lint
+
+#### basic api documentation for  [gulp-scss-lint (v0.4.0)](http://github.com/juanfran/gulp-scss-lint)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-scss-lint.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-scss-lint) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-scss-lint.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-scss-lint)
+
 #### Validate `.scss` files with `scss-lint`
 
 [![NPM](https://nodei.co/npm/gulp-scss-lint.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-scss-lint)
@@ -80,7 +83,8 @@
     "scripts": {
         "test": "mocha"
     },
-    "version": "0.4.0"
+    "version": "0.4.0",
+    "bin": {}
 }
 ```
 
