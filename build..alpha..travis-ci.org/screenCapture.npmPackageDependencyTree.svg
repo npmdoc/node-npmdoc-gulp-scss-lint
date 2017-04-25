@@ -115,7 +115,7 @@
 <tspan x="10" y="1802">  │ │ │ ├── filename-regex@2.0.0 </tspan>
 <tspan x="10" y="1818">  │ │ │ ├── is-extglob@1.0.0 </tspan>
 <tspan x="10" y="1834">  │ │ │ ├── is-glob@2.0.1 </tspan>
-<tspan x="10" y="1850">  │ │ │ ├─┬ kind-of@3.1.0 </tspan>
+<tspan x="10" y="1850">  │ │ │ ├─┬ kind-of@3.2.0 </tspan>
 <tspan x="10" y="1866">  │ │ │ │ └── is-buffer@1.1.5 </tspan>
 <tspan x="10" y="1882">  │ │ │ ├─┬ normalize-path@2.1.1 </tspan>
 <tspan x="10" y="1898">  │ │ │ │ └── remove-trailing-separator@1.0.1 </tspan>
